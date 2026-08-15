@@ -57,12 +57,14 @@ Invalid records
 Data type validation
 Data transformation
 Record validation
+
 3. Data Validation
 
 Records were separated into:
 
 Cleaned/accepted records
 Rejected records
+
 4. Data Storage
 
 Validated healthcare data was stored in Azure MySQL for further analysis.
