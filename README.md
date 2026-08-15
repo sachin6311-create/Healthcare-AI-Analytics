@@ -1,216 +1,222 @@
-# Healthcare AI Analytics
+# 🏥 Healthcare AI Analytics
 
-## Project Overview
+An end-to-end healthcare data analytics project built using Azure Data Factory, Azure MySQL, SQL, and Power BI.
 
-An end-to-end healthcare analytics project built using Azure Data
-Factory, Azure MySQL, SQL and Power BI.
+## 📌 Project Overview
 
-The project demonstrates the complete data analytics workflow:
+This project demonstrates a complete data analytics pipeline starting from raw healthcare data through data cleaning, transformation, validation, database storage, SQL analysis, and interactive Power BI dashboards.
 
-Raw Healthcare CSV
-        ↓
-Azure Blob Storage
+The project focuses on healthcare operations, patient demographics, revenue, treatment costs, payment status, insurance, and department performance.
+
+---
+
+## 🏗️ Project Architecture
+
+
+Raw Healthcare Data
         ↓
 Azure Data Factory
         ↓
 Data Cleaning & Transformation
         ↓
-Data Validation
+Data Quality Validation
         ↓
-Clean / Rejected Data
+   ┌───────────────┐
+   ↓               ↓
+Clean Data     Rejected Data
+   ↓               ↓
+Azure MySQL Database
         ↓
+    SQL Analysis
+        ↓
+      Power BI
+        ↓
+Healthcare Business Insights
+
+
+🛠️ Tools & Technologies
+Azure Data Factory
 Azure MySQL
-        ↓
+MySQL
+SQL
 Power BI
-        ↓
-Healthcare Business Analytics
+Power Query
+DAX
+GitHub
+🔄 ETL Process
+1. Data Extraction
 
----
+Healthcare data was collected from the source CSV dataset and loaded into the Azure data pipeline.
 
-## Business Objective
+2. Data Cleaning
 
-The objective of this project is to analyze healthcare operations,
-patient activity, revenue, treatment costs, departments, admissions,
-payments, insurance and machine utilization.
+The ETL pipeline handled data quality issues including:
 
-The project also monitors ETL data quality by separating valid and
-rejected records during the Azure Data Factory pipeline.
+Missing values
+Invalid records
+Data type validation
+Data transformation
+Record validation
+3. Data Validation
 
----
+Records were separated into:
 
-## Technology Stack
+Cleaned/accepted records
+Rejected records
+4. Data Storage
 
-- Azure Blob Storage
-- Azure Data Factory
-- Azure MySQL
-- MySQL
-- Power BI
-- Power Query
-- DAX
-- GitHub
+Validated healthcare data was stored in Azure MySQL for further analysis.
 
----
+5. SQL Analysis
 
-## Azure Data Engineering
+SQL was used to perform:
 
-Azure Data Factory was used to:
+Patient analysis
+Revenue analysis
+Department analysis
+Treatment cost analysis
+Payment analysis
+Insurance analysis
+Doctor performance analysis
+Ranking and aggregation
+Data quality analysis
+📊 Power BI Dashboard
 
-- Extract healthcare data
-- Clean and transform records
-- Convert and validate data types
-- Handle data-quality issues
-- Separate valid and rejected records
-- Load processed data into Azure MySQL
+The Power BI solution contains multiple analytical pages:
 
-Rejected records were stored separately for further investigation.
+Executive Overview
 
----
+Provides a high-level view of:
 
-## Azure MySQL
+Total Patients
+Total Revenue
+Treatment Cost
+Average Treatment Cost
+Revenue Trend
+Department Revenue
+Payment Status
+Top Diagnoses
+Admission Type
+Patients Analysis
 
-The processed healthcare data was stored in Azure MySQL.
+Analyzes:
 
-Main tables:
+Patient demographics
+Gender distribution
+Age groups
+Department-wise patients
+City-wise patients
+Admission types
+Insurance distribution
+Revenue & Financial Analytics
 
-- healthcare_clean
-- healthcare_rejected
+Analyzes:
 
-Azure MySQL was then used as the analytical data source for Power BI.
+Monthly revenue
+Revenue by department
+Revenue by payment status
+Revenue by insurance type
+Doctor-wise revenue
+Net revenue
+Department Performance
 
----
+Analyzes:
 
-## SQL Analysis
+Department patient volume
+Department revenue
+Treatment cost
+Average treatment cost
+Department performance
+Operations & Admissions Analytics
 
-SQL analysis includes:
+Analyzes healthcare operational and admission patterns.
 
-- Executive KPI analysis
-- Revenue analysis
-- Department performance
-- Department profitability
-- Patient demographics
-- Diagnosis analysis
-- Admission analysis
-- Payment analysis
-- Insurance analysis
-- Doctor performance
-- Machine utilization
-- Treatment-cost analysis
-- Length-of-stay analysis
-- Data-quality analysis
-- Duplicate detection
-- CTEs
-- Window functions
-- Ranking analysis
+Payment & Insurance
 
----
+Analyzes:
 
-## Power BI Dashboard
+Payment status
+Insurance type
+Payment distribution
+Insurance-related revenue
+ETL & Data Quality Analytics
 
-The Power BI report contains:
+Tracks:
 
-1. Executive Overview
-2. Patients Analysis
-3. Revenue & Financial Analytics
-4. Department Performance
-5. Operations & Admissions Analytics
-6. Payment & Insurance
-7. ETL & Data Quality Analytics
+Source records
+Cleaned records
+Rejected records
+Data quality percentage
+ETL pipeline status
+Rejection rate
+📈 Key ETL Results
 
-Interactive features include:
+The ETL dashboard shows:
 
-- KPI cards
-- Filters
-- Bookmarks
-- Drillthrough
-- Tooltips
-- Page navigation
-- Interactive charts
+Metric	Result
+Source Rows	50,320
+Cleaned Rows	49,360
+Rejected Rows	960
+Data Quality	98.09%
 
----
+The dashboard provides a visual view of the ETL pipeline performance and data quality.
 
-## Dashboard Preview
+💡 Business Insights
 
-### Executive Overview
+The dashboard can help healthcare management understand:
 
-![Executive Overview](06_Dashboard_Screenshots/01_Executive_Overview.png)
+Patient volume by department
+Revenue-generating departments
+Treatment cost patterns
+Payment collection status
+Insurance contribution
+Doctor revenue performance
+Common diagnoses
+Admission patterns
+Data quality and rejected records
+🎯 Business Decisions Supported
 
-### Patients Analysis
+Healthcare management can use the analysis to:
 
-![Patients Analysis](06_Dashboard_Screenshots/02_Patients_Analysis.png)
+Identify high-performing departments
+Monitor treatment costs
+Improve payment collection
+Understand insurance contribution
+Optimize staffing based on patient volume
+Identify frequently occurring diagnoses
+Monitor doctor-level revenue
+Improve data quality in future ETL cycles
+📂 Repository Structure
+healthcare-ai-analytics/
+│
+├── README.md
+│
+├── 02_Azure_Data_Factory/
+│
+├── 03_Azure_MySQL/
+│
+├── 04_SQL/
+│   └── Healthcare_Project_Analysis.sql
+│
+├── 05_PowerBI/
+│
+├── 06_Dashboard_Screenshots/
+│
+└── 07_Documentation/
+🚀 Future Improvements
 
-### Revenue & Financial Analytics
+Future versions of the project can include:
 
-![Revenue Analytics](06_Dashboard_Screenshots/03_Revenue_Financial.png)
+Automated data refresh
+Real-time healthcare monitoring
+Predictive patient analytics
+Patient readmission prediction
+Treatment cost forecasting
+Advanced anomaly detection
+Automated data-quality alerts
+Cloud-based Power BI deployment
+👨‍💻 Author
 
-### Department Performance
+Sachin Kumar
 
-![Department Performance](06_Dashboard_Screenshots/04_Department_Performance.png)
-
-### Operations & Admissions
-
-![Operations](06_Dashboard_Screenshots/05_Operations_Admissions.png)
-
-### Payment & Insurance
-
-![Payment & Insurance](06_Dashboard_Screenshots/06_Payment_Insurance.png)
-
-### ETL & Data Quality
-
-![ETL Data Quality](06_Dashboard_Screenshots/07_ETL_Data_Quality.png)
-
----
-
-## Key Business Questions
-
-- Which departments generate the highest revenue?
-- Which departments have the highest profitability?
-- How does revenue change over time?
-- Which diagnoses have the highest patient volume?
-- Which admission types generate the most revenue?
-- How much revenue is pending?
-- Which insurance types contribute the most revenue?
-- Which doctors generate the highest revenue?
-- Which machines have the highest utilization?
-- What is the average length of stay?
-- What are the major data-quality issues?
-
----
-
-## Business Value
-
-The dashboard helps management identify:
-
-- High-performing departments
-- Revenue opportunities
-- Treatment-cost patterns
-- Pending payment opportunities
-- Insurance performance
-- Operational bottlenecks
-- Machine utilization
-- Patient trends
-- Data-quality issues
-
----
-
-## Future Improvements
-
-- Revenue forecasting
-- Patient demand forecasting
-- Insurance claim analysis
-- Payment aging analysis
-- Automated data-quality alerts
-- Predictive patient analytics
-- Machine maintenance prediction
-
----
-
-## Project Architecture
-
-Raw CSV → Azure Blob Storage → Azure Data Factory →
-Azure MySQL → SQL Analysis → Power BI
-
----
-
-## Author
-
-Sachin
+Data Analytics | SQL | Power BI | Azure | ETL
