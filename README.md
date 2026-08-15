@@ -44,12 +44,13 @@ Power Query
 DAX
 GitHub
 🔄 ETL Process
-1. Data Extraction
 
+
+1. Data Extraction
 Healthcare data was collected from the source CSV dataset and loaded into the Azure data pipeline.
 
-2. Data Cleaning
 
+2. Data Cleaning
 The ETL pipeline handled data quality issues including:
 
 Missing values
@@ -58,19 +59,19 @@ Data type validation
 Data transformation
 Record validation
 
-3. Data Validation
 
+3. Data Validation
 Records were separated into:
 
 Cleaned/accepted records
 Rejected records
 
-4. Data Storage
 
+4. Data Storage
 Validated healthcare data was stored in Azure MySQL for further analysis.
 
-5. SQL Analysis
 
+5. SQL Analysis
 SQL was used to perform:
 
 Patient analysis
@@ -82,86 +83,33 @@ Insurance analysis
 Doctor performance analysis
 Ranking and aggregation
 Data quality analysis
-📊 Power BI Dashboard
 
-The Power BI solution contains multiple analytical pages:
 
-Executive Overview
+## 📊 Power BI Dashboard
 
-Provides a high-level view of:
+### Dashboard Preview
 
-Total Patients
-Total Revenue
-Treatment Cost
-Average Treatment Cost
-Revenue Trend
-Department Revenue
-Payment Status
-Top Diagnoses
-Admission Type
-Patients Analysis
+#### Healthcare Analytics Overview
+![Healthcare Analytics Overview](06_Dashboard_Screenshots/Healthcare%20Analytics%20overview.png)
 
-Analyzes:
+#### Patients Analysis
+![Patients Analysis](06_Dashboard_Screenshots/Patients%20Analysis.png)
 
-Patient demographics
-Gender distribution
-Age groups
-Department-wise patients
-City-wise patients
-Admission types
-Insurance distribution
-Revenue & Financial Analytics
+#### Financial Analytics
+![Financial Analytics](06_Dashboard_Screenshots/Financial%20Analytics.png)
 
-Analyzes:
+#### Department Performance
+![Department Performance](06_Dashboard_Screenshots/Department%20Performance.png)
 
-Monthly revenue
-Revenue by department
-Revenue by payment status
-Revenue by insurance type
-Doctor-wise revenue
-Net revenue
-Department Performance
+#### Operations & Admissions
+![Operations & Admissions](06_Dashboard_Screenshots/Operations%20and%20Admissions.png)
 
-Analyzes:
+#### Payment & Admissions
+![Payment & Admissions](06_Dashboard_Screenshots/Payment%20and%20Admissions.png)
 
-Department patient volume
-Department revenue
-Treatment cost
-Average treatment cost
-Department performance
-Operations & Admissions Analytics
+#### ETL & Data Quality
+![ETL & Data Quality](06_Dashboard_Screenshots/ETL%20AND%20DATA%20QUALITY.png)
 
-Analyzes healthcare operational and admission patterns.
-
-Payment & Insurance
-
-Analyzes:
-
-Payment status
-Insurance type
-Payment distribution
-Insurance-related revenue
-ETL & Data Quality Analytics
-
-Tracks:
-
-Source records
-Cleaned records
-Rejected records
-Data quality percentage
-ETL pipeline status
-Rejection rate
-📈 Key ETL Results
-
-The ETL dashboard shows:
-
-Metric	Result
-Source Rows	50,320
-Cleaned Rows	49,360
-Rejected Rows	960
-Data Quality	98.09%
-
-The dashboard provides a visual view of the ETL pipeline performance and data quality.
 
 💡 Business Insights
 
