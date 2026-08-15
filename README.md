@@ -176,8 +176,9 @@ Doctor revenue performance
 Common diagnoses
 Admission patterns
 Data quality and rejected records
-🎯 Business Decisions Supported
 
+
+🎯 Business Decisions Supported
 Healthcare management can use the analysis to:
 
 Identify high-performing departments
@@ -188,6 +189,8 @@ Optimize staffing based on patient volume
 Identify frequently occurring diagnoses
 Monitor doctor-level revenue
 Improve data quality in future ETL cycles
+
+
 📂 Repository Structure
 healthcare-ai-analytics/
 │
@@ -205,8 +208,9 @@ healthcare-ai-analytics/
 ├── 06_Dashboard_Screenshots/
 │
 └── 07_Documentation/
-🚀 Future Improvements
 
+
+🚀 Future Improvements
 Future versions of the project can include:
 
 Automated data refresh
@@ -217,8 +221,8 @@ Treatment cost forecasting
 Advanced anomaly detection
 Automated data-quality alerts
 Cloud-based Power BI deployment
-👨‍💻 Author
 
+👨‍💻 Author
 Sachin Kumar
 
 Data Analytics | SQL | Power BI | Azure | ETL
